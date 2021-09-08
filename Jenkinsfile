@@ -18,8 +18,7 @@ pipeline {
                  
 
                   '''
-				  sh "aws s3 ls"
-                                 sh "aws s3 cp  --recursive . s3://cloudyeticicd1/TERRAFORMSCRIPT_EKS" 
+		
           sh "terraform init" 
  sh "terraform plan"
 
