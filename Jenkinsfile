@@ -18,7 +18,7 @@ pipeline {
                  
 
                   '''
-		
+	sh "terraform version"	
           sh "terraform init" 
  sh "terraform plan"
 
