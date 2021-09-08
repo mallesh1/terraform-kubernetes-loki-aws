@@ -10,7 +10,7 @@ pipeline {
             }
             steps {
 			    echo "****ap-southeast-1***"
-				dir('s3') {
+				
      sh '''
                   pwd
 		  whoami
@@ -22,7 +22,7 @@ pipeline {
                                  sh "aws s3 cp  --recursive . s3://cloudyeticicd1/TERRAFORMSCRIPT_EKS" 
           sh "terraform init" 
  sh "terraform plan"
-}
+
               
             }
         }
