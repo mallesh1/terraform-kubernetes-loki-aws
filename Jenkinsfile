@@ -10,7 +10,8 @@ pipeline {
             }
             steps {
 			    echo "****ap-southeast-1***"
-				
+		    dir('terraform-kubernetes-loki-aws') {
+    				
      sh '''
                   pwd
 		  whoami
@@ -21,6 +22,8 @@ pipeline {
 	sh "terraform version"	
           sh "terraform init" 
  sh "terraform plan"
+
+}
 
               
             }
